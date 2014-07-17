@@ -8,6 +8,9 @@ require 'uri'
 
 # Fetch requires
 dir = File.expand_path(File.dirname(__FILE__))
+require File.join(dir, 'email_fetch', 'hunt', 'search')
+require File.join(dir, 'email_fetch', 'hunt', 'google')
+
 require File.join(dir, 'email_fetch', 'version')
 require File.join(dir, 'email_fetch', 'utils')
 

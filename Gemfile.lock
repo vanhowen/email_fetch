@@ -10,14 +10,33 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    coderay (1.1.0)
     diff-lcs (1.2.5)
     domain_name (0.5.19)
       unf (>= 0.0.5, < 1.0.0)
-    fuzzy_match (2.0.4)
+    ffi (1.9.3)
+    formatador (0.2.5)
+    fuzzy_match (2.1.0)
     glutton_ratelimit (0.2.0)
+    guard (2.6.1)
+      formatador (>= 0.2.4)
+      listen (~> 2.7)
+      lumberjack (~> 1.0)
+      pry (>= 0.9.12)
+      thor (>= 0.18.1)
+    guard-rspec (4.2.10)
+      guard (~> 2.1)
+      rspec (>= 2.14, < 4.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
+    listen (2.7.9)
+      celluloid (>= 0.15.2)
+      rb-fsevent (>= 0.9.3)
+      rb-inotify (>= 0.9)
     log4r (1.1.10)
+    lumberjack (1.0.9)
     mechanize (2.7.3)
       domain_name (~> 0.5, >= 0.5.1)
       http-cookie (~> 1.0)
@@ -27,6 +46,7 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
+    method_source (0.8.2)
     mime-types (2.3)
     mini_portile (0.6.0)
     net-http-digest_auth (1.4)
@@ -34,7 +54,14 @@ GEM
     nokogiri (1.6.2.1)
       mini_portile (= 0.6.0)
     ntlm-http (0.1.1)
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rake (10.3.2)
+    rb-fsevent (0.9.4)
+    rb-inotify (0.9.5)
+      ffi (>= 0.5.0)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
       rspec-expectations (~> 3.0.0)
@@ -47,6 +74,9 @@ GEM
     rspec-mocks (3.0.2)
       rspec-support (~> 3.0.0)
     rspec-support (3.0.2)
+    slop (3.5.0)
+    thor (0.19.1)
+    timers (1.1.0)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.6)
@@ -58,5 +88,7 @@ PLATFORMS
 DEPENDENCIES
   bundler
   email_fetch!
+  guard-rspec
   rake
+  rb-fsevent
   rspec
